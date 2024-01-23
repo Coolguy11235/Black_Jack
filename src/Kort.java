@@ -11,8 +11,8 @@ public class Kort {
     public Kort(Symboler symboler, Rang rang) {
         this.symboler = symboler;
         this.rang = rang;
-        // Kortets framsidan är upp från början
-        framsidanUppe = true;
+        // Kortets framsidan är nere från början
+        framsidanUppe = false;
     }
     // Public metoder
     public String getSymboler() {
@@ -21,12 +21,16 @@ public class Kort {
     public int getRang() {
         return rang.getRang();
     }
+    // Vänder kort
+    public void vändKort() {
+        framsidanUppe = !framsidanUppe;
+    }
 
     // Matar ut kortet som string om framsidan är uppe
     public String toString() {
         String str = "";
         if (framsidanUppe) {
-            str += rang.getRang() + " av " + symboler.printSymboler();
+            str += rang.printRang() + " " + symboler.printSymboler();
         } else {
             str = "Framsidan är nere, du kan inte se kortet";
         }
