@@ -8,7 +8,7 @@ public class Main {
         k1.vändKort();
         k2.vändKort();
 
-        // Skapar en hand
+        // Skapar en hand s
         Hand h1 = new Hand();
         Hand h2 = new Hand();
         h1.tilläga(k1);
