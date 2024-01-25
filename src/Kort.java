@@ -27,7 +27,7 @@ public class Kort {
     }
 
     // Matar ut kortet som string om framsidan är uppe
-    public String toString() {
+    public String tillString() {
         String str = "";
         if (framsidanUppe) {
             str += rang.printRang() + " " + symboler.printSymboler();

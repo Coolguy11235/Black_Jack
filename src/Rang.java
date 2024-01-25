@@ -25,3 +25,4 @@ public enum Rang {
         return rangString;
     }
 }
+

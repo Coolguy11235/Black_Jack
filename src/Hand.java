@@ -17,11 +17,11 @@ public class Hand {
     public String visaHand() {
         String str = "";
         for (Kort k: korten) {
-            str += k.toString();
+            str += k.tillString() + "\n";
         }
         return str;
     }
-    public boolean lämna(Kort kort, Hand andraHand) {
+    public boolean ge(Kort kort, Hand andraHand) {
         if (!korten.contains(kort)) {
             return false;
         } else {
