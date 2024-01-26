@@ -1,10 +1,29 @@
 public class Main {
     public static void main(String[] args) {
+
         // Skapar en deck
         Deck d1 = new Deck();
         d1.fyllning();
-        System.out.println("Decken har följande kort: " + d1.visaHand());
+        d1.blandning();
 
+        Hand h1, h2, h3, dealer;
+        h1 = new Hand();
+        h2 = new Hand();
+        h3 = new Hand();
+        dealer = new Hand();
+        Hand[] händer = {h1, h2, h3};
+
+        d1.delning(händer, 2);
+
+        d1.delning(dealer, 2);
+
+        for (int i = 0; i < händer.length; i++) {
+            händer[i].vändKorten();
+            System.out.println(händer[i].visaHand());
+        }
+
+        dealer.korten.get(0).vändKort();
+        System.out.println("Dealers kort: \n" + dealer.visaHand());
     }
 }
 

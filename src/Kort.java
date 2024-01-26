@@ -5,14 +5,13 @@ public class Kort {
     private Symboler symboler;
     private Rang rang;
     // Säger om kortets framsida är uppe eller inte
-    private boolean framsidanUppe;
+    public boolean framsidanUppe;
 
     // Konstrukturn
     public Kort(Symboler symboler, Rang rang) {
         this.symboler = symboler;
         this.rang = rang;
-        // Kortets framsidan är nere från början
-        framsidanUppe = false;
+        framsidanUppe = true;
     }
     // Public metoder
     public String getSymboler() {
@@ -20,6 +19,9 @@ public class Kort {
     }
     public int getRang() {
         return rang.getRang();
+    }
+    public String printRang() {
+        return rang.printRang();
     }
     // Vänder kort
     public void vändKort() {

@@ -16,11 +16,24 @@ public class Deck extends Hand {
 
     public void blandning() {
         for (int i = korten.size() - 1; i > 0; i--) {
-            int välj = slump.nextInt(i);
-            Kort slumpKort = korten.get(välj);
-            Kort sistaKort = korten.get(i);
-            korten.set(i, slumpKort);
-            korten.set(välj, sistaKort);
+            int välj = slump.nextInt(i + 1);
+            korten.set(i, korten.set(välj, korten.get(i)));
         }
+    }
+
+    public void delning(Hand[] händer, int perHand) {
+        for (int i = 0; i < perHand; i++) {
+            for (int j = 0; j < händer.length; j++) {
+                this.ge(korten.get(0), händer[j]);
+            }
+        }
+    }
+    public void delning(Hand hand, int perHand) {
+        for (int i = 0; i < perHand; i++) {
+            this.ge(korten.get(0), hand);
+        }
+    }
+    public void vändKort(Kort k) {
+        k.vändKort();
     }
 }
