@@ -1,25 +1,9 @@
 public class Main {
     public static void main(String[] args) {
-        Kort k1, k2;
-        k1 = new Kort(Symboler.HJÄRTER, Rang.ESS);
-        k2 = new Kort(Symboler.HJÄRTER, Rang.KNEKT);
-
-        // Vänder korten
-        k1.vändKort();
-        k2.vändKort();
-
-        // Skapar en hand s
-        Hand h1 = new Hand();
-        Hand h2 = new Hand();
-        h1.tilläga(k1);
-        h1.tilläga(k2);
-        System.out.println("Första hand: \n" + h1.visaHand() + "\n" + "Andra hand: \n" + h2.visaHand() + "\n");
-        h1.ge(k1, h2);
-        System.out.println("Ger första kortet till andra hand");
-        System.out.println("Första hand: \n" + h1.visaHand() + "\n" + "Andra hand: \n" + h2.visaHand());
-        h1.rensa();
-        System.out.println("Rensar första hand");
-        System.out.println("Första hand: \n" + h1.visaHand() + "\n" + "Andra hand: \n" + h2.visaHand());
+        // Skapar en deck
+        Deck d1 = new Deck();
+        d1.fyllning();
+        System.out.println("Decken har följande kort: " + d1.visaHand());
 
     }
 }
