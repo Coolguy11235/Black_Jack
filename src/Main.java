@@ -1,7 +1,7 @@
 public class Main {
     public static void main(String[] args) {
 
-        // Skapar en deck
+        // Skapar en deck.
         Deck d1 = new Deck();
         d1.fyllning();
         d1.blandning();
