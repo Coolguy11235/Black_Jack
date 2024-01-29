@@ -1,4 +1,4 @@
-// Kort klasset
+// Klasset som innehåller kortets attributer och funktioner
 public class Kort {
 
     // Privata fälter
@@ -17,17 +17,18 @@ public class Kort {
     public String getSymboler() {
         return symboler.printSymboler();
     }
+    // Rang som int
     public int getRang() {
         return rang.getRang();
     }
+    // Rang som String (gjord för Ess, knekt, dam och kung)
     public String printRang() {
         return rang.printRang();
     }
-    // Vänder kort
+    // Vänder kort genom att omvända "framsidanUppe" metoden
     public void vändKort() {
         framsidanUppe = !framsidanUppe;
     }
-
     // Matar ut kortet som string om framsidan är uppe
     public String tillString() {
         String str = "";

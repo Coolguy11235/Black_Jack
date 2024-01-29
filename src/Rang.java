@@ -1,5 +1,6 @@
-// Rangordning av korten
+// Klasset som skapar en rangordning för kort
 public enum Rang {
+    // Alla värde som kort kan innehålla både i int- och String-form
     ESS(1, "Ess"), TVÅ(2, "2"),
     TRE(3, "3"), FYRA(4, "4"),
     FEM(5, "5"), SEX(6, "6"),
@@ -7,17 +8,17 @@ public enum Rang {
     NIO(9, "9"), TIO(10, "10"),
     KNEKT(10, "Knekt"), DAM(10, "Dam"), KUNG(10, "Kung");
 
-    // Privat fält
+    // Privat fälter:
     private final int rangVärde;
     private final String rangString;
 
-    // Konstruktorn
+    // Konstruktorn:
     private Rang(int rangVärde, String rangString) {
         this.rangVärde = rangVärde;
         this.rangString = rangString;
     }
 
-    // Public metoder som matar ut texter
+    // Public metoder som matar ut texter:
     public int getRang() {
         return rangVärde;
     }
